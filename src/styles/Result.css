@@ -1,0 +1,34 @@
+.result-container {
+    text-align: center;
+    background: white;
+    color: #0056b3;
+    padding: 50px;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.result-score {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.play-again-btn {
+    padding: 12px 28px;
+    background: #007bff;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.play-again-btn:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
