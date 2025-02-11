@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../styles/CriticalQuiz.css";
 import { criticalQuestions } from "./questions";
 
-
 const CriticalQuiz = () => {
   const [questionIndex, setQuestionIndex] = useState(Math.floor(Math.random() * criticalQuestions.length));
   const [userAnswer, setUserAnswer] = useState(null);
@@ -29,13 +28,19 @@ const CriticalQuiz = () => {
     <div className="critical-quiz-container">
       <h2>🧠 Critical Thinking Quiz</h2>
 
-      
-
       {showAddQuestion ? (
         <AddQuestion onClose={() => setShowAddQuestion(false)} />
       ) : (
         <>
           <h3 className="question">{criticalQuestions[questionIndex].question}</h3>
+          
+          {/* ✅ Show codeSnippet if available */}
+          {criticalQuestions[questionIndex].codeSnippet && (
+            <pre className="code-snippet">
+              <code>{criticalQuestions[questionIndex].codeSnippet}</code>
+            </pre>
+          )}
+
           <div className="options-container">
             {criticalQuestions[questionIndex].options.map((option, index) => (
               <button
@@ -48,6 +53,7 @@ const CriticalQuiz = () => {
               </button>
             ))}
           </div>
+
           {userAnswer && (
             <>
               <p className="explanation">💡 Explanation: {criticalQuestions[questionIndex].explanation}</p>
