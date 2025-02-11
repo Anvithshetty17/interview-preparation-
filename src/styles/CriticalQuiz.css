@@ -86,5 +86,14 @@ margin-bottom: 110px;
 .add-question-btn:hover {
     background: #218838;
 }
+.code-snippet {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: monospace;
+  overflow-x: auto;
+  margin: 10px 0;
+}
 
   
